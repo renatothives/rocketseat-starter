@@ -5,27 +5,22 @@
   <body>
     <!-- Conteúdo HTML -->
     <script>
-      var nome = "Diego";
-      var idade = 23;
-      var peso = 80.5;
-      var humano = true;
+      var x = 10, y = 5;
+      console.log(x,y);
 
-      var alunos = ["Alan","Diego","Rafael","Renato"];
+      var resultado = x + y;
+      console.log(resultado);
 
-      var aluno = {
-        nome: alunos[3],
-        idade: 25,
-        peso: 70.5,
-        humano: true
-      };
+      // formas de atribuir valor para a variável.
+      x = x + 3;
+      console.log(x);
+      x += 3;
+      console.log(x);
 
-      console.log(nome);
+      x = '10'; // manter sempre o mesmo tipo (numérico) para somar variáveis.
+      var resultado = x + y; // Neste caso será concatenado.
+      console.log(resultado);
 
-      nome = 2;
-      console.log(nome);
-
-      console.log(alunos[3]);
-      console.log(aluno.idade);
     </script>
   </body>
 </html>
