@@ -5,11 +5,24 @@
   <body>
     <!-- Conteúdo HTML -->
     <script>
-      function soma(numero1,numero2) {
-        var resultado = numero1 + numero2;
-        return resultado;
+
+      // 1 == "1" TRUE
+      // 1 === "1" FALSE
+
+
+      function retornaSexo(sexo) {
+        // F = Feminino
+        // M = Masculino
+        if (sexo === "M") {
+          return "Masculino";
+        } else if (sexo === "F") {
+          return "Feminino";
+        } else {
+          return "Inválido";
+        }
       }
-      var resultado = soma(1,2);
+
+      var resultado = retornaSexo("M");
       console.log(resultado);
     </script>
   </body>
