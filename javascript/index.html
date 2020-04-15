@@ -5,22 +5,12 @@
   <body>
     <!-- Conteúdo HTML -->
     <script>
-      var x = 10, y = 5;
-      console.log(x,y);
-
-      var resultado = x + y;
+      function soma(numero1,numero2) {
+        var resultado = numero1 + numero2;
+        return resultado;
+      }
+      var resultado = soma(1,2);
       console.log(resultado);
-
-      // formas de atribuir valor para a variável.
-      x = x + 3;
-      console.log(x);
-      x += 3;
-      console.log(x);
-
-      x = '10'; // manter sempre o mesmo tipo (numérico) para somar variáveis.
-      var resultado = x + y; // Neste caso será concatenado.
-      console.log(resultado);
-
     </script>
   </body>
 </html>
