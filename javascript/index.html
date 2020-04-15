@@ -13,12 +13,13 @@
       function retornaSexo(sexo) {
         // F = Feminino
         // M = Masculino
-        if (sexo === "M") {
-          return "Masculino";
-        } else if (sexo === "F") {
-          return "Feminino";
-        } else {
-          return "Inválido";
+        switch (sexo) {
+          case "M":
+            return "Masculino";
+          case "F":
+            return "Feminino";
+          default:
+            return "Inválido";
         }
       }
 
