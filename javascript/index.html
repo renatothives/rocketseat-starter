@@ -5,48 +5,19 @@
   <body>
     <!-- Conteúdo HTML -->
     <script>
-      // AND (&&), OR (||), NOT (!= ou !==)
-      
-      var sexo = "M", idade = 23;
-
-      if (sexo === "M" && idade >= 18) {
-        console.log("Verdadeiro");
-      }
-
-      idade = 10;
-
-      if (sexo === "M" || idade >= 18) {
-        console.log("Verdadeiro");
-      }
-
-      sexo = "F";
-
-      if (sexo === "M" || idade >= 18) {
-        console.log("Verdadeiro");
-      } else {
-        console.log("Falso");
-      }
-
-      sexo = "F";
-      if (sexo !== "M") {
-        console.log("Não é Masculino")
-      }
-      
-      // forma convencional
-
-      var masculino;
+      var sexo = "M";
 
       if (sexo === "M") {
-        masculino = true;
+        var retorno = "Masculino";
       } else {
-        masculino = false;
+        var retorno = "Feminino";
       }
-      console.log(masculino);
+      console.log(retorno);
 
-      sexo = "M";
-      masculino = sexo === "M";
-      console.log(masculino);
+      sexo = "F";
 
+      retorno = (sexo === "M") ? "Masculino" : "Feminino"
+      console.log(retorno);
     </script>
   </body>
 </html>
