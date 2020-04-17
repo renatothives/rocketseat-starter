@@ -5,19 +5,22 @@
   <body>
     <!-- Conteúdo HTML -->
     <script>
-      // for, while
-
-      // utilizar quando eu sei o tamanho do intervalo.
-      for (var i = 0; i <= 10; i++){
-        console.log(i);
+      function exibeOlaMundo() {
+        console.log("Olá Mundo.");
       }
 
-      // fluxo com quantidade de loop's indeterminado.
-      var j = 988798798;
-      while(j > 60){
-        console.log(j);
-        j /= 5;
+      // setInterval >> segundo parâmetro em milisegundos 1000 = 1 segundo
+      // função com "()" no final é executada no momento da interpretação do código.
+      // função sem "()" no final eu estou referenciando a função, assim eu repasso o escopo da função para outro local como parâmetro.
+      setInterval(exibeOlaMundo,1000);
+
+      function exibeAlgo() {
+        console.log("Hello World.");
       }
+
+      // Delay na execução de algo
+
+      setTimeout(exibeAlgo,5500);
     </script>
   </body>
 </html>
