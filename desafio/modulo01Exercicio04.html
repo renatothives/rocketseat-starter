@@ -1,38 +1,33 @@
-<html>
-  <head>
-    <title>Curso JavaScript</title>
-    <meta charset="UTF-8"/>
-  </head>
-  <body>
-    <!-- Conteúdo HTML -->
-    <script>
-      //Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
-      function experiencia(anos) {
-        switch (anos) {
-          // De 0-1 ano: Iniciante
-          case 0:
-          case 1:
-            return "Iniciante";
+<body>
+  <!-- Conteúdo HTML -->
+  <script>
+    //Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+    function experiencia(anos) {
+      switch (true) {
+        // De 0-1 ano: Iniciante
+        case (anos == 0 || anos == 1):
+          return "Iniciante";
 
-          // De 1-3 anos: Intermediário
-          case 2:
-          case 3:
-            return "Intermediário";
+        // De 1-3 anos: Intermediário
+        case (anos == 2 || anos == 3):
+          return "Intermediário";
 
-          // De 3-6 anos: Avançado
-          case 4:
-          case 5:
-          case 6:
-            return "Avançado";
+        // De 3-6 anos: Avançado
+        case (anos > 3 && anos < 7):
+          return "Avançado";
 
-          // De 7 acima: Jedi Master
-          default:
-            return "Jedi Master";
-        }
+        // De 7 acima: Jedi Master
+        case (anos>6):
+          return "Jedi Master";
+
+        // Testado com números negativos e letras
+        default:
+          return "O valor " + anos + " é inválido.";
       }
+    }
 
-      var anosEstudo = 8;
-      console.log(experiencia(anosEstudo));
-    </script>
-  </body>
+    var anosEstudo = 0;
+    console.log(experiencia(anosEstudo));
+  </script>
+</body>
 </html>
