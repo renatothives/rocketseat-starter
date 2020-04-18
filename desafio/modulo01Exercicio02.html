@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <!-- Conteúdo HTML -->
+    <script>
+      //Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+      function pares(x, y) {
+        var menor = (x < y) ? x : y;
+        var maior = x + y - menor;
+
+        while (menor <= maior) {
+          if (menor%2 === 1)
+            menor++;
+
+          console.log(menor);
+          menor += 2;
+        }
+      }
+
+      pares(25, 35);
+    </script>
+  </body>
+</html>
