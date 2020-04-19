@@ -8,47 +8,19 @@
     <div id="app">
       <br>
       <input type="text" name="nome" id="aluno"/>
-      <input type="text" name="outro" id="outro"/>
       <button class="botao">Adicionar</button>
     </div>
     <script>
       // Referenciar elementos da DOM (HTML) diretamento do javascript
       // # = ID
-
-      // Buscar o elemento da DOM através do ID
-      var inputElement = document.getElementById("aluno");
-      console.log("buscando pelo ID");
-      console.log(inputElement);
-
-      // Buscar o elemento da DOM através da TAG. Neste caso sempre irá retornar um vetor.
-      console.log("buscando pela TAG");
-
-      inputElement = document.getElementsByTagName("input");
-      console.log(inputElement);
-      console.log(inputElement[0]);
-
-      // Buscar o elemento da DOM através da classe
-      console.log("buscando pela Classe");
+      // . = Classe
+      var inputElement = document.querySelector("div#app input#aluno");
+      var buttonElement = document.querySelector("div#app button.botao");
       
-      inputElement = document.getElementsByClassName("botao");
-      console.log(inputElement);
-      console.log(inputElement[0]);
-
-      // Buscar o elemento da DOM percorrendo ela até encontrar o elemento procurado
-      console.log("navegando pela DOM - querySelector");
-
-      // querySelector sempre retornará um único elemento (o primeiro)
-      inputElement = document.querySelector("div#app input");
-      console.log(inputElement);
-
-      inputElement = document.querySelector("div#app input[name=outro]");
-      console.log(inputElement);
-
-       // querySelectorAll retornará todos os elementos que se enquadrem da busca
-       console.log("navegando pela DOM - querySelectorAll");
-       
-       inputElement = document.querySelectorAll("div#app input");
-      console.log(inputElement);
+      buttonElement.onclick = function(){
+        var text = inputElement.value;
+        alert(text);
+      }
     </script>
   </body>
 </html>
