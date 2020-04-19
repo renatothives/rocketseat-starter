@@ -1,26 +1,22 @@
 <html>
   <head>
     <title>Curso JavaScript</title>
+    <meta charset="UTF-8"/>
   </head>
   <body>
-    <!-- Conteúdo HTML -->
+    <!-- DOM é composta de todos os elementos dispostos em tela -->
+    <div>
+      <br>
+      <button onclick="mostraAlerta()">Me pressione.</button>
+      <br><br>
+      <button onmouseover="mostraAlerta()">Passo o mouse aqui..</button>
+      <br><br>
+      <input onkeypress="mostraAlerta()"/>
+    </div>
     <script>
-      function exibeOlaMundo() {
-        console.log("Olá Mundo.");
+      function mostraAlerta() {
+        alert("O alerta foi acionado.");
       }
-
-      // setInterval >> segundo parâmetro em milisegundos 1000 = 1 segundo
-      // função com "()" no final é executada no momento da interpretação do código.
-      // função sem "()" no final eu estou referenciando a função, assim eu repasso o escopo da função para outro local como parâmetro.
-      setInterval(exibeOlaMundo,1000);
-
-      function exibeAlgo() {
-        console.log("Hello World.");
-      }
-
-      // Delay na execução de algo
-
-      setTimeout(exibeAlgo,5500);
     </script>
   </body>
 </html>
