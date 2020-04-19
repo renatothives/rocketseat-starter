@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Curso JavaScript</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <button id="botao">Crie um novo quadrado ao clicar</button>
+    <div id="app">
+    </div>
+    <script>
+      // # = ID >>> . = Classe
+      /*Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+        vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+        aparecer na tela. */
+      var buttonElement = document.querySelector("#botao");
+
+      buttonElement.onclick = function(){
+        var appElement = document.querySelector("#app");
+        var boxElement = document.createElement("div");
+
+        appElement.appendChild(boxElement);
+
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = "#f00";
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
