@@ -5,18 +5,50 @@
   </head>
   <body>
     <!-- DOM é composta de todos os elementos dispostos em tela -->
-    <div>
+    <div id="app">
       <br>
-      <button onclick="mostraAlerta()">Me pressione.</button>
-      <br><br>
-      <button onmouseover="mostraAlerta()">Passo o mouse aqui..</button>
-      <br><br>
-      <input onkeypress="mostraAlerta()"/>
+      <input type="text" name="nome" id="aluno"/>
+      <input type="text" name="outro" id="outro"/>
+      <button class="botao">Adicionar</button>
     </div>
     <script>
-      function mostraAlerta() {
-        alert("O alerta foi acionado.");
-      }
+      // Referenciar elementos da DOM (HTML) diretamento do javascript
+      // # = ID
+
+      // Buscar o elemento da DOM através do ID
+      var inputElement = document.getElementById("aluno");
+      console.log("buscando pelo ID");
+      console.log(inputElement);
+
+      // Buscar o elemento da DOM através da TAG. Neste caso sempre irá retornar um vetor.
+      console.log("buscando pela TAG");
+
+      inputElement = document.getElementsByTagName("input");
+      console.log(inputElement);
+      console.log(inputElement[0]);
+
+      // Buscar o elemento da DOM através da classe
+      console.log("buscando pela Classe");
+      
+      inputElement = document.getElementsByClassName("botao");
+      console.log(inputElement);
+      console.log(inputElement[0]);
+
+      // Buscar o elemento da DOM percorrendo ela até encontrar o elemento procurado
+      console.log("navegando pela DOM - querySelector");
+
+      // querySelector sempre retornará um único elemento (o primeiro)
+      inputElement = document.querySelector("div#app input");
+      console.log(inputElement);
+
+      inputElement = document.querySelector("div#app input[name=outro]");
+      console.log(inputElement);
+
+       // querySelectorAll retornará todos os elementos que se enquadrem da busca
+       console.log("navegando pela DOM - querySelectorAll");
+       
+       inputElement = document.querySelectorAll("div#app input");
+      console.log(inputElement);
     </script>
   </body>
 </html>
