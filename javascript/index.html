@@ -6,21 +6,22 @@
   <body>
     <!-- DOM é composta de todos os elementos dispostos em tela -->
     <div id="app">
-      <br>
-      <input type="text" name="nome" id="aluno"/>
-      <button class="botao">Adicionar</button>
     </div>
     <script>
-      // Referenciar elementos da DOM (HTML) diretamento do javascript
       // # = ID
       // . = Classe
-      var inputElement = document.querySelector("div#app input#aluno");
-      var buttonElement = document.querySelector("div#app button.botao");
-      
-      buttonElement.onclick = function(){
-        var text = inputElement.value;
-        alert(text);
-      }
+      var linkElement = document.createElement("a");
+
+      linkElement.setAttribute("href","https://rocketseat.com.br/");
+      linkElement.setAttribute("title","Site da Rocketseat.")
+
+      var textElement = document.createTextNode("Acessar site da Rocketseat.");
+      linkElement.appendChild(textElement);
+
+      var containerElement = document.querySelector("#app");
+      containerElement.appendChild(linkElement);
+
+      console.log(containerElement);
     </script>
   </body>
 </html>
