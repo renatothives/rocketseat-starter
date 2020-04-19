@@ -18,26 +18,24 @@
       var nomes = ["Diego", "Gabriel", "Lucas"];      
       var appElement = document.querySelector("#app");
       var ulElement = document.createElement("ul");
+      var inputElement = document.querySelector("body input[name='nome']");
 
       ulElement.setAttribute("id","nomes");
       appElement.appendChild(ulElement);
 
       function adicionar(){
-        var inputElement = document.querySelector("body input[name='nome']");
         var liElement = document.createElement("li");
         var text = document.createTextNode(inputElement.value);
 
         ulElement.appendChild(liElement);
         liElement.appendChild(text);
+        inputElement.value = "";
       }
 
       for (const nome of nomes){
-        var liElement = document.createElement("li");
-        var text = document.createTextNode(nome);
-
-        ulElement.appendChild(liElement);
-        liElement.appendChild(text);
-      }   
+        inputElement.value = nome;
+        adicionar();
+      }
     </script>
   </body>
 </html>
