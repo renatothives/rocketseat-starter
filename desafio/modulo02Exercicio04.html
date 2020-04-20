@@ -5,7 +5,7 @@
   </head>
   <body>
     <input type="text" name="nome">
-    <button onClick="adicionar()">Adicionar</button>
+    <button onClick="adicionar()" id="botao">Adicionar</button>
     <div id="app">
     </div>
     <script>
@@ -15,10 +15,12 @@
       // nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
       // demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique
 
-      var nomes = ["Diego", "Gabriel", "Lucas"];      
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      var inputElement = document.querySelector("body input[name='nome']");
+      var buttonElement = document.querySelector("#botao");   
       var appElement = document.querySelector("#app");
       var ulElement = document.createElement("ul");
-      var inputElement = document.querySelector("body input[name='nome']");
 
       ulElement.setAttribute("id","nomes");
       appElement.appendChild(ulElement);
@@ -34,7 +36,7 @@
 
       for (const nome of nomes){
         inputElement.value = nome;
-        adicionar();
+        buttonElement.onclick();
       }
     </script>
   </body>
