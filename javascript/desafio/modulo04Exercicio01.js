@@ -4,11 +4,7 @@
     
 function checaIdade(idade){
   return new Promise(function(resolve, reject){
-    if (idade >= 18){
-      resolve();
-    } else {
-      reject();
-    }
+    setTimeout((idade >= 18) ? resolve() : reject(),2000);
   })
 }
 
