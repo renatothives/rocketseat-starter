@@ -29,3 +29,6 @@ repositoriesPromise()
   .catch(function(error){
     console.warn(error);
   });
+
+var inputElement = document.querySelector("div#app input[name='user']");
+var buttonElement = document.querySelector("div#app button");
