@@ -4,7 +4,7 @@
     URL de exemplo: https://api.github.com/users/diego3g/repos
     Basta alterar "diego3g" pelo nome do usuário.  --*/
     
-var repositoriesPromisse = function(){
+var repositoriesPromise = function(){
   return new Promise(function(resolve,reject){
     var xhr = new XMLHttpRequest();
     xhr.open("GET","https://api.github.com/users/renatothives/repos");
@@ -22,7 +22,7 @@ var repositoriesPromisse = function(){
   });
 };
 
-repositoriesPromisse()
+repositoriesPromise()
   .then(function(response){
     console.log(response[0].name);
   })
