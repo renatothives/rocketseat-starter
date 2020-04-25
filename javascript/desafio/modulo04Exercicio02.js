@@ -4,10 +4,10 @@
     URL de exemplo: https://api.github.com/users/diego3g/repos
     Basta alterar "diego3g" pelo nome do usuário.  --*/
     
-var repositoriesPromise = function(){
+var repositoriesPromise = function(usuario){
   return new Promise(function(resolve,reject){
     var xhr = new XMLHttpRequest();
-    xhr.open("GET","https://api.github.com/users/renatothives/repos");
+    xhr.open("GET","https://api.github.com/users/" + usuario + "/repos");
     xhr.send(null);
 
     xhr.onreadystatechange = function(){
@@ -22,13 +22,31 @@ var repositoriesPromise = function(){
   });
 };
 
-repositoriesPromise()
-  .then(function(response){
-    console.log(response[0].name);
-  })
-  .catch(function(error){
-    console.warn(error);
-  });
-
+var appElement = document.querySelector("#app");
 var inputElement = document.querySelector("div#app input[name='user']");
 var buttonElement = document.querySelector("div#app button");
+var ulElement = document.createElement("ul");
+
+ulElement.setAttribute("id","repositorios");
+appElement.appendChild(ulElement);
+
+buttonElement.onclick = function(){
+  var usuario = inputElement.value;
+
+  ulElement.innerHTML = "";
+
+  repositoriesPromise(usuario)
+    .then(function(response){
+      for (const repositorio of response){
+        var liElement = document.createElement("li");
+        var text = document.createTextNode(repositorio.name);
+        ulElement.appendChild(liElement);
+        liElement.appendChild(text);
+      }
+    })
+    .catch(function(error){
+      console.warn(error);
+    });
+
+  inputElement.value = "";
+};
