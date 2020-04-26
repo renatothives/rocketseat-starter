@@ -1,0 +1,8 @@
+{
+  "name": "rocketseat-start",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:renatothives/rocketseat-start.git",
+  "author": "Renato Thives <renato.ti@outlook.com.br>",
+  "license": "MIT"
+}
