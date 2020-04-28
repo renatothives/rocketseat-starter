@@ -4,5 +4,10 @@
   "main": "index.js",
   "repository": "git@github.com:renatothives/rocketseat-start.git",
   "author": "Renato Thives <renato.ti@outlook.com.br>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5"
+  }
 }
