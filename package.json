@@ -9,5 +9,8 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5"
+  },
+  "scripts":{
+    "dev": "babel ./javascript-es6/main.js -o ./javascript-es6/bundle.js -w"
   }
 }
