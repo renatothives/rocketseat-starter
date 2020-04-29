@@ -1,17 +1,13 @@
-const arr = [1,3,4,5,8,9,14];
-
-const newArray = arr.map(item => item * 2);
-console.log(newArray);
-
-const newArr = arr.map(function(item){
-  return item * 2;
-});
-console.log(newArr);
-
-const teste = () => { // não recomendado
-  return "teste"; 
+function soma(a = 2,b = 3){
+  return a + b;
 }
-console.log(teste());
 
-const objeto = () => ({ nome: "Renato"}); // retornar um objeto
-console.log(objeto());
+console.log(soma());
+console.log(soma(1));
+console.log(soma(3,9));
+
+const multiplicacao = (a = 2,b = 3) => a * b;
+
+console.log(multiplicacao());
+console.log(multiplicacao(1));
+console.log(multiplicacao(3,9));
