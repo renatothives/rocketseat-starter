@@ -21,6 +21,13 @@ class TodoList extends List {
   }
 }
 
+// Classe com método estático pode ser acessada diretamente
+class Matematica {
+  static soma(a,b) {
+    return a + b;
+  }
+}
+
 const minhaLista = new TodoList();
 
 document.querySelector("#novotodo").onclick = function() {
@@ -28,3 +35,5 @@ document.querySelector("#novotodo").onclick = function() {
 }
 
 minhaLista.mostraUsuario();
+
+console.log(Matematica.soma(3,5));
