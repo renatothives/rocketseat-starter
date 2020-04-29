@@ -1,23 +1,27 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 9, 14]; // map serve para percorrer o arrya/vetor e retornar algo
-
-var newArr = arr.map(function (item, index) {
-  return item + index;
+var arr = [1, 3, 4, 5, 8, 9, 14];
+var newArray = arr.map(function (item) {
+  return item * 2;
 });
-console.log(newArr); // consumir todo o vetor e transformar todo ele numa única variável, geralmente um número.
-
-var sum = arr.reduce(function (total, next) {
-  return total + next;
+console.log(newArray);
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
-console.log(sum); // irá verificar se o item corresponde com a validação feita, obrigatoriamente tem que retornar true ou false.
+console.log(newArr);
 
-var filter = arr.filter(function (item) {
-  return item % 2 === 0;
-});
-console.log(filter); // irá buscar uma informação no array, quando não encontrato retorna "undefined"
+var teste = function teste() {
+  // não recomendado
+  return "teste";
+};
 
-var find = arr.filter(function (item) {
-  return item === 4;
-});
-console.log(find);
+console.log(teste());
+
+var objeto = function objeto() {
+  return {
+    nome: "Renato"
+  };
+}; // retornar um objeto
+
+
+console.log(objeto());
