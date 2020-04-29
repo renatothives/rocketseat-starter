@@ -88,4 +88,30 @@ document.querySelector("#novotodo").onclick = function () {
 };
 
 minhaLista.mostraUsuario();
-console.log(Matematica.soma(3, 5));
+console.log(Matematica.soma(3, 5)); // Novas formas de definir variáveis (var, const, let)
+
+var a = 1; // Valor Constante
+// a = 3;  >> isso gera erro, pois não pode ter sua informação reatribuída.
+
+var usuario = {
+  nome: "Diego"
+};
+usuario.nome = "Renato"; // permitido pois isso é mutação do objeto.
+
+console.log(a + " - " + usuario.nome);
+
+function teste(x) {
+  var y = 10; // let é uma "variável" de escopo, só acessível dentro da função.
+
+  console.log(x, y);
+
+  if (true) {
+    var _y = 100; // esse y é valido dentro do if
+
+    console.log(x, _y);
+  }
+
+  console.log(x, y); // volta a aprentar o y da function
+}
+
+teste(5);
