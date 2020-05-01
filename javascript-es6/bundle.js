@@ -1,21 +1,24 @@
 "use strict";
 
-function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
-  return a + b;
+var usuario = {
+  nome: "Renato",
+  idade: 25,
+  endereco: {
+    cidade: "Londrina",
+    uf: "PR"
+  }
+};
+console.log(usuario); // desestruturação
+
+var nome = usuario.nome,
+    idade = usuario.idade;
+console.log(idade);
+var cidade = usuario.endereco.cidade;
+console.log(cidade);
+
+function mostraNome(_ref) {
+  var nome = _ref.nome;
+  console.log(nome);
 }
 
-console.log(soma());
-console.log(soma(1));
-console.log(soma(3, 9));
-
-var multiplicacao = function multiplicacao() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
-  return a * b;
-};
-
-console.log(multiplicacao());
-console.log(multiplicacao(1));
-console.log(multiplicacao(3, 9));
+mostraNome(usuario);

@@ -1,13 +1,23 @@
-function soma(a = 2,b = 3){
-  return a + b;
+const usuario = {
+  nome: "Renato",
+  idade: 25,
+  endereco: {
+    cidade: "Londrina",
+    uf: "PR"
+  }
 }
 
-console.log(soma());
-console.log(soma(1));
-console.log(soma(3,9));
+console.log(usuario);
 
-const multiplicacao = (a = 2,b = 3) => a * b;
+// desestruturação
+const { nome, idade } = usuario;
+console.log(idade);
 
-console.log(multiplicacao());
-console.log(multiplicacao(1));
-console.log(multiplicacao(3,9));
+const { endereco: { cidade } } = usuario;
+console.log(cidade);
+
+function mostraNome ( { nome } ) {
+  console.log(nome);
+}
+
+mostraNome(usuario);
