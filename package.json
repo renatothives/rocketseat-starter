@@ -11,6 +11,8 @@
     "@babel/preset-env": "^7.9.5"
   },
   "scripts":{
-    "dev": "babel ./javascript-es6/main.js -o ./javascript-es6/bundle.js -w"
+    "old": "babel ./javascript-es6/js-es/main.js -o ./javascript-es6/js/main.js -w",
+    "dev": "babel javascript-es6/js-es -d javascript-es6/js -w",
+    "build": "babel javascript-es6/js-es -s -D -d javascript-es6/js"
   }
 }
