@@ -13,6 +13,7 @@
   "scripts":{
     "old": "babel ./javascript-es6/js-es/main.js -o ./javascript-es6/js/main.js -w",
     "dev": "babel javascript-es6/js-es -d javascript-es6/js -w",
+    "desafio": "babel javascript-es6/desafio -d javascript-es6/js",
     "build": "babel javascript-es6/js-es -s -D -d javascript-es6/js"
   }
 }
