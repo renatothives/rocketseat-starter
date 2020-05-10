@@ -20,8 +20,4 @@ console.log(mostraUsuario(nome, idade));
 console.log(mostraUsuario(nome));
 
 // 3.4
-const promise = () {
-  return new Promise(function(resolve, reject) {
-  return resolve();
-  })
- } 
+const promise = () => new Promise((resolve, reject) => resolve());
