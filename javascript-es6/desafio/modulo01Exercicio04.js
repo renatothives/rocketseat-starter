@@ -19,3 +19,17 @@ const estado = empresa.endereco.estado;
 console.log(nome); // Rocketseat
 console.log(cidade); // Rio do Sul
 console.log(estado); // SC
+
+// 4.2 Desestruturação em parâmetros
+
+// Na seguinte função:
+function mostraInfo(usuario) {
+  return `${usuario.nome} tem ${usuario.idade} anos.`;
+}
+mostraInfo({ nome: 'Diego', idade: 23 })
+
+// Utilize a desestruturação nos parâmetros da função para buscar o nome e idade do usuário
+// separadamente e a função poder retornar apenas:
+
+return `${nome} tem ${idade} anos.`;
+ 
