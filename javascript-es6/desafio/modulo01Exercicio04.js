@@ -24,9 +24,11 @@ console.log(estado); // SC
 
 // Na seguinte função:
 function mostraInfo(usuario) {
-  return `${usuario.nome} tem ${usuario.idade} anos.`;
+  let nome = usuario.nome;
+  let idade = usuario.idade;
+  return `${nome} tem ${idade} anos.`;
 }
-mostraInfo({ nome: 'Diego', idade: 23 })
+console.log(mostraInfo({ nome: 'Diego', idade: 23 }));
 
 // Utilize a desestruturação nos parâmetros da função para buscar o nome e idade do usuário
 // separadamente e a função poder retornar apenas:
