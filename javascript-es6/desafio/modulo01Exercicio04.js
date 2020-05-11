@@ -30,6 +30,4 @@ mostraInfo({ nome: 'Diego', idade: 23 })
 
 // Utilize a desestruturação nos parâmetros da função para buscar o nome e idade do usuário
 // separadamente e a função poder retornar apenas:
-
-return `${nome} tem ${idade} anos.`;
- 
+// return `${nome} tem ${idade} anos.`;
