@@ -12,9 +12,10 @@ const empresa = {
 // Utilize a desestruturação para transformar as propriedades nome, cidade e estado em variáveis, no
 // fim deve ser possível fazer o seguinte:
 
-const nome = empresa.nome;
-const cidade = empresa.endereco.cidade;
-const estado = empresa.endereco.estado;
+const {
+  nome,
+  endereco: {cidade, estado}
+} = empresa;
 
 console.log(nome); // Rocketseat
 console.log(cidade); // Rio do Sul
@@ -23,9 +24,7 @@ console.log(estado); // SC
 // 4.2 Desestruturação em parâmetros
 
 // Na seguinte função:
-function mostraInfo(usuario) {
-  let nome = usuario.nome;
-  let idade = usuario.idade;
+function mostraInfo({nome, idade}) {
   return `${nome} tem ${idade} anos.`;
 }
 console.log(mostraInfo({ nome: 'Diego', idade: 23 }));
